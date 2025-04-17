@@ -17,62 +17,45 @@ public class CalculatorClass{
             System.out.print("SELECT AN OPTION: ");
             int x = sc.nextInt();
             switch (x) {
-                case 1: add();
-                break;
-                
-                case 2: subtract();
-                break;
-
-                case 3: divide();
-                break;
-                
-                case 4:multiply();
-                break;
-
-                case 5: flag = false;
-                break; 
-                default: System.out.print("ENTER A VALID OPTION! ");
-                break;
+                case 1: calculate("+"); break;
+                case 2: calculate("-"); break;
+                case 3: divide(); break;
+                case 4: calculate("*"); break;
+                case 5: flag = false; break;
+                default: System.out.print("ENTER A VALID OPTION! "); break;
             }
+
+    }
+             
+    }
+
+    public static void calculate(String op) {
+        System.out.print("ENTER FIRST NUMBER: ");
+        int num1 = sc.nextInt();  
+        System.out.print("ENTER SECOND NUMBER: ");
+        int num2 = sc.nextInt();
+    
+        switch (op) {
+            case "+": System.out.println(num1 + num2); break;
+            case "-": System.out.println(num1 - num2); break;
+            case "*": System.out.println(num1 * num2); break;
         }
-    }
-
-    public static void add(){
-        System.out.print("ENTER FIRST NUMBER: ");
-        int num1 = sc.nextInt(); 
-        System.out.print("ENTER SECOND NUMBER: ");
-        int num2 = sc.nextInt();
-        System.out.println(num1+num2);
-    }
-
-    public static void subtract(){
-        System.out.print("ENTER FIRST NUMBER: ");
-        int num1 = sc.nextInt(); 
-        System.out.print("ENTER SECOND NUMBER: ");
-        int num2 = sc.nextInt();
-        System.out.println(num1-num2);
     }
 
     public static void divide(){
-        System.out.print("ENTER THE DIVIDEND: ");
-        int num1 = sc.nextInt(); 
-        System.out.print("ENTER THE DIVISOR: ");
-        int num2 = sc.nextInt();
-        if( num2 == 0 ){
-            System.out.println("CAN'T DIVIDE BY ZERO!");
+        System.out.println("ENTER THE DIVIDEND: ");
+        int dividend = sc.nextInt();
+        System.out.println("ENTER THE DIVISOR: ");
+        int divisor = sc.nextInt();
+
+        if( divisor == 0 ){
+            System.out.println("CAN'T DIVIDE BY 0!");
             return;
         }
 
-        System.out.println(num1/num2);
+        System.out.println(dividend/divisor);
     }
-
-    public static void multiply(){
-        System.out.print("ENTER FIRST NUMBER: ");
-        int num1 = sc.nextInt(); 
-        System.out.print("ENTER SECOND NUMBER: ");
-        int num2 = sc.nextInt();
-        System.out.println(num1*num2);
-    }
+    
 
 }
 
