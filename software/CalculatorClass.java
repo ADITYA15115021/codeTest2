@@ -39,6 +39,7 @@ public class CalculatorClass{
             case "+": System.out.println(num1 + num2); break;
             case "-": System.out.println(num1 - num2); break;
             case "*": System.out.println(num1 * num2); break;
+            default:System.out.println("INCORRECT OPERATION!");
         }
     }
 
